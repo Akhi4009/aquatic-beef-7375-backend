@@ -4,43 +4,7 @@ const ProductModel=require("../models/product.model")
 
 const router=express.Router()
 
-// router.get("/", async (req, res) => {
-//     const query = req.query
-//     const q = query.q || ""
-    
-    
-//     const sort = query._sort || null
-//     const order = query._order || null
-//     const limit = query._limit || null
-//     const page = query._page || 1
-//     let discount = query.discount || 0
-//     let rating = query.rating || 0
-    
-//     delete query.q
-//     delete query._sort
-//     delete query._order
-//     delete query._limit
-//     delete query.discount
-//     delete query.rating
-    
-//     let _sorting = {}
-//     _sorting[`${sort}`] = order
-    
-//     let Skip;
-//     if(page==1){
-//       Skip = 0
-//     }
-//     else{
-//      Skip= (page-1)*limit
-//     }
-//     try {
-//     const ProductData = await ProductModel.find({name:{$regex:q},...query,discount:{$gte:+discount},rating:{$gte:+rating}}).sort(_sorting).skip(Skip).limit(limit)
-//      res.send(ProductData) 
-//     } catch (error) {
-//      res.send({message:"Cannot get the products data",error:error.message}) 
-//     }
-//     });
-    
+
     
    router.get("/",async(req,res)=>{
     
